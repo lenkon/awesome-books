@@ -24,6 +24,25 @@ const showSavedData = () => {
   }
 };
 
+function storeData() {
+  const data = JSON.stringify(bookData);
+  localStorage.setItem('bookstoredata', data);
+}
+
+addBookData = (event) => {
+  event.preventDefault();
+  const title = document.getElementById('title');
+  const author = document.getElementById('author');
+  bookData.push({
+    title: title.value,
+    author: author.value,
+  });
+
+  storeData();
+  showSavedData();
+  formInput.reset();
+};
+
 showSavedData();
 
 formInput.addEventListener('submit', addBookData);

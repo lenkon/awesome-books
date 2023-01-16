@@ -103,6 +103,11 @@ Open the index.html file in your Web Browser.
 
 - GitHub: [@githubhandle](https://github.com/lenkon)
 
+👤 **Henry**
+
+- GitHub: [@githubhandle](https://github.com/Odongo006)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
