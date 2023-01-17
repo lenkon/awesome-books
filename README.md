@@ -61,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/lenkon/Portfolio)
+- [Live Demo Link](https://github.com/lenkon/awesome-books)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,9 +80,9 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ``` 
-  $ git clone https://github.com/lenkon/Portfolio.git
+  $ git clone https://github.com/lenkon/awesome-books
 
-  $ cd Portfolio
+  $ cd awesome-books
 ```
 ### Install
 
@@ -101,11 +101,11 @@ Open the index.html file in your Web Browser.
 
 👤 **lenkon**
 
-- GitHub: [@githubhandle](https://github.com/lenkon)
+- GitHub: [@lenkon](https://github.com/lenkon)
 
 👤 **Henry**
 
-- GitHub: [@githubhandle](https://github.com/Odongo006)
+- GitHub: [@Odongo006](https://github.com/Odongo006)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
