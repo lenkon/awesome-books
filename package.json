@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-react": "^7.32.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "scripts": {
+    "start": "node js/script.js"
+  }
+}
