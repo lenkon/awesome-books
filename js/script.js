@@ -7,7 +7,14 @@ class Library {
     
   showSavedData () {
     if (this.bookData) {
-      let bookList = '<div class="table-container">';
+      let bookList = '';
+      if (this.bookData.length > 0) {
+        bookList = '<div class="table-container">';        
+      }
+      else {
+        bookList = '<div>';
+      }
+
       bookList += '<table class="table table-hover table-striped"><tbody>';
       this.bookData.forEach((item, i) => {
         bookList += `        
@@ -25,17 +32,19 @@ class Library {
     }
   }
 
- addBookData(event) {
+  addBookData(event) {
     event.preventDefault(); 
     const title = document.getElementById('title');
     const author = document.getElementById('author');
-    this.bookData.push({
-      title: title.value,
-      author: author.value,
-    });
-    this.storeData();
-    this.showSavedData();
-    this.formInput.reset();
+    if (title.value.length > 0 && author.value.length > 0) {
+      this.bookData.push({
+        title: title.value,
+        author: author.value,
+      });
+      this.storeData();
+      this.showSavedData();
+      this.formInput.reset();
+    }    
   }
 
   storeData() {    
@@ -52,7 +61,6 @@ class Library {
     this.showSavedData();
   }
 }
-
 
 const libraryData = new Library();
 
