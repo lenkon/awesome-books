@@ -40,18 +40,19 @@ class Library {
 
   storeData() {    
     localStorage.setItem('bookstoredata', JSON.stringify(this.bookData));
-  }  
+  }
+  
+  removeBook(event) {
+    let id = event.target.id;
+    let modBookData = this.bookData.filter(function(element, i) {
+      return ((i != id) ? element : '');
+    });
+    this.bookData = modBookData;
+    this.storeData();
+    this.showSavedData();
+  }
 }
 
-const removeBook = (event) => {
-  let id = event.target.id;
-  let modBookData = bookData.filter(function(element, i) {
-    return ((i != id) ? element : '');
-  });
-  bookData = modBookData;
-  storeData();
-  showSavedData();
-}
 
 const libraryData = new Library();
 
