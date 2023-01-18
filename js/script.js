@@ -1,7 +1,47 @@
-const bookCollection = document.getElementById('book-collection');
-const formInput = document.getElementById('book-form');
+class Library {  
+  constructor() {
+    this.bookData = [];
+    this.bookData = JSON.parse(localStorage.getItem('bookstoredata'));
+    this.formInput = document.getElementById('book-form');
+  }
+    
+  showSavedData () {
+    if (this.bookData) {
+      let bookList = '<div class="table-container">';
+      bookList += '<table class="table table-hover table-striped"><tbody>';
+      this.bookData.forEach((item, i) => {
+        bookList += `        
+        <tr>
+          <td>"${item.title}" by ${item.author}</td>
+          <td><button type="submit" class="remove-button" id="${i}">Remove</button></td>
+        </tr>          
+        `;
+      });
+      bookList += '</tbody></table></div>';
+      const bookCollection = document.getElementById('book-collection');
+      bookCollection.innerHTML = bookList;   
+      const removeButtons = document.querySelectorAll('.remove-button');
+      removeButtons.forEach((item) => item.addEventListener('click', this.removeBook.bind(this)));    
+    }
+  }
 
-let bookData = [];
+ addBookData(event) {
+    event.preventDefault(); 
+    const title = document.getElementById('title');
+    const author = document.getElementById('author');
+    this.bookData.push({
+      title: title.value,
+      author: author.value,
+    });
+    this.storeData();
+    this.showSavedData();
+    this.formInput.reset();
+  }
+
+  storeData() {    
+    localStorage.setItem('bookstoredata', JSON.stringify(this.bookData));
+  }  
+}
 
 const removeBook = (event) => {
   let id = event.target.id;
@@ -13,47 +53,8 @@ const removeBook = (event) => {
   showSavedData();
 }
 
-const showSavedData = () => {
-  if (localStorage.getItem('bookstoredata')) {
-    bookData = JSON.parse(localStorage.getItem('bookstoredata'));
-    
-    let bookList = '';
-    bookData.forEach((item, i) => {
-      bookList += `
-      <div>
-        <div>${item.title}</div>
-        <div>${item.author}</div>
-        <div>
-          <button type="submit" class="remove-button" id="${i}">Remove</button>
-        </div>
-        <hr>
-      </div>
-      `;
-    });
-    bookCollection.innerHTML = bookList;   
-    const removeButtons = document.querySelectorAll('.remove-button');
-    removeButtons.forEach((item) => item.addEventListener('click', removeBook));    
-  }
-};
+const libraryData = new Library();
 
-function storeData() {
-  const data =  JSON.stringify(bookData);
-  localStorage.setItem('bookstoredata', data);
-}
+libraryData.showSavedData();
 
-const addBookData = (event) => {
-  event.preventDefault();
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
-  bookData.push({
-    title: title.value,
-    author: author.value,
-  });
-  storeData();
-  showSavedData();
-  formInput.reset();
-};
-
-showSavedData();
-
-formInput.addEventListener('submit', addBookData);
+libraryData.formInput.addEventListener('submit', libraryData.addBookData.bind(libraryData));

@@ -7,27 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Book Library">
     <meta name="author" content="Lenkon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
   </head>
   <main>
-    <div>
-      <h1>Awesome Books</h1>
-
-      <!-- Display book collection -->
-      <div id="book-collection" class="book-collection"></div>
+    <div class="library-container">
+      <div>
+        <h1>All awesome books</h1>
+  
+        <!-- Display book collection -->
+        <div id="book-collection" class="book-collection"></div>
+      </div>
+      <section>
+        <div>
+          <h2>Add a new book</h2>
+        </div>
+        <div >
+          <form id="book-form">
+            <br>
+            <input type="text" name="title" id="title" placeholder="Title">
+            <br><br> 
+            <input type="text" name="author" id="author" placeholder="Author">
+            <br><br>            
+            <input class="add-button" id="submit" type="submit" value="Add">            
+          </form>
+        </div>
+      </section>
     </div>
-    <section>
-      <form id="book-form">
-        <br>
-        <input type="text" name="title" id="title" placeholder="Title">
-        <br><br> 
-        <input type="text" name="author" id="author" placeholder="Author">
-        <br><br>
-        <input type="submit" value="Add">
-      </form>
-    </section>
   </main>
   <body>
   </body>

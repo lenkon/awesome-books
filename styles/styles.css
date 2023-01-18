@@ -1,3 +1,8 @@
 * {
   box-sizing: border-box;
 }
+
+.table-container {
+  box-sizing: border-box;
+  border: rgb(8, 8, 8) solid 3px;
+}
