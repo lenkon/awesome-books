@@ -61,7 +61,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/lenkon/awesome-books)
+- [Repository Link](https://github.com/lenkon/awesome-books)
+- [Video Demo Link](https://www.loom.com/share/b894395a5f9b49caaf21018345d036dc)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
