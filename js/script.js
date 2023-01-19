@@ -62,14 +62,27 @@ class Library {
   }
 }
 
-function showContent() {  
-    this.classList.add('show-content');   
-}
 setInterval(function showDate() {
   const currentDateTime = new Date().toDateString();
   document.getElementById('date-time').innerHTML = `${currentDateTime} ${new Date().toLocaleTimeString('en-US')}`;
-  setInterval(showDate, 0);
-}, 0);
+  setInterval(showDate, 5000);
+}, 5000);
+
+const menuItems = document.querySelectorAll('.menu-item');
+
+function showContent() {
+  const displayContent = this.getAttribute('link-name');  
+  const contents = document.querySelectorAll('.toggle');
+  contents.forEach((item) => {
+    item.classList.add('show-none');
+    document.getElementById(displayContent).classList.remove('show-none');
+  });
+}
+
+document.getElementById('addbook').classList.add('show-none');
+document.getElementById('contact').classList.add('show-none');
+
+menuItems.forEach((menuItem) => menuItem.addEventListener('click', showContent));
 
 const libraryData = new Library();
 
