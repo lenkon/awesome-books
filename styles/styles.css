@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+  box-sizing: border-box;    
 }
 
 .table {
@@ -23,6 +23,59 @@
 }
 
 .table-container {
-  box-sizing: border-box;
-  border: rgb(8 8 8) solid 3px;
+  border: rgb(8 8 8) solid 3px;  
+}
+
+.library-wrapper {
+  width: 97%;
+  /* display: none; */
+}
+
+.library-wrapper h1,
+.add-book div h2 {
+  text-align: center;
+  margin: 36px 0;
+}
+
+.navbar {
+  border: black solid 2px;
+  margin: 5px 14px;
+}
+
+.bg-primary {
+  background-color: rgb(210, 217, 219);
+}
+
+.copyrights-footer { 
+  padding: 3px 0 0 6px;  
+  position: fixed;
+  bottom: 5px;
+  margin-left: 5px;  
+}
+
+.show-none {
+  display: none;
+}
+
+.show-content {
+  display: block;
+}
+
+.contact {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0;
+  /* display: none; */
+  
+}
+
+.contact-details {
+  padding-left: 150px;
+}
+
+.add-book {
+  /* display: none; */
+  width: 70%;
 }

@@ -12,15 +12,31 @@
     <link rel="stylesheet" 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
   </head>
-  <main>
-    <div class="library-container">
-      <div>
+
+  <header>
+    <nav class="navbar bg-primary">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Awesome Books</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="menu-item" href="#">List</a></li>
+          <li><a class="menu-item" href="#">Add new</a></li>
+          <li><a class="menu-item" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>    
+  </header>
+
+   <main>
+    <section class="library-container">
+      <div class="library-wrapper">
         <h1>All awesome books</h1>
   
         <!-- Display book collection -->
         <div id="book-collection" class="book-collection"></div>
       </div>
-      <section>
+      <section class="add-book">
         <div>
           <h2>Add a new book</h2>
         </div>
@@ -34,8 +50,25 @@
           </form>
         </div>
       </section>
-    </div>
+    </section>
+
+    <section class="contact" id= "contact">
+      <h2 class="contact-header">Contact Information</h2>
+      <div>
+        <p>Do you have any question or you just want to say "Hello"? <br> You can reach out to us! </p>
+      </div>
+      <ul class="contact-details">
+        <li>Our e-mail:<a href="mailto:mail@mail.com">mail@mail.com</a></li>
+        <li>Our phone number <a href="tel:(+1) 678-895-6067">(+1) 678-895-6067</a></li>
+        <li>Our address:  4394 Mount Olive Road, Roswell, Georgia, United States</li>
+      </ul>
+    </section>
   </main>
+  <footer class="copyrights-container">
+    <div class="copyrights-footer">
+      <p>Copyright (C) 2023. All rights reserved.</p>
+    </div>
+  </footer>
   <body>
   </body>
   <script src="./js/script.js"></script>

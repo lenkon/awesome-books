@@ -15,7 +15,7 @@ class Library {
         bookList = '<div>';
       }
 
-      bookList += '<table class="table table-hover table-striped"><tbody>';
+      bookList += '<table class="table table-hover table-sm table-striped"><tbody>';
       this.bookData.forEach((item, i) => {
         bookList += `        
         <tr>
@@ -60,6 +60,10 @@ class Library {
     this.storeData();
     this.showSavedData();
   }
+}
+
+function showContent() {  
+    this.classList.add('show-content');   
 }
 
 const libraryData = new Library();
