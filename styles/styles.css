@@ -46,6 +46,14 @@
   background-color: rgb(210, 217, 219);
 }
 
+.time-container {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  margin-right: 14px;
+}
+
 .copyrights-footer { 
   padding: 3px 0 0 6px;  
   position: fixed;

@@ -65,6 +65,11 @@ class Library {
 function showContent() {  
     this.classList.add('show-content');   
 }
+setInterval(function showDate() {
+  const currentDateTime = new Date().toDateString();
+  document.getElementById('date-time').innerHTML = `${currentDateTime} ${new Date().toLocaleTimeString('en-US')}`;
+  setInterval(showDate, 0);
+}, 0);
 
 const libraryData = new Library();
 
